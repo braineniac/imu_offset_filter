@@ -8,7 +8,7 @@ class ImuOffsetFilterNode:
     def __init__(self, topic_in, topic_out, N, frame_id=None):
         self.N = N
         self.imu_pub = rospy.Publisher(topic_out, Imu, queue_size=1)
-        self.imu_sub = rospy.Subscriber(topic_in, Imu, self.imu_cb())
+        self.imu_sub = rospy.Subscriber(topic_in, Imu, self.imu_cb)
 
         self.offset_done = False
 
