@@ -1,8 +1,8 @@
 <launch>
-  <node name="imu_filter_offset_node" pkg="imu_filter_offset" type="imu_filter_offset_node.py">
-    <rosparam="N" value=1000/>
-    <rosparam="in" value="/imu"/>
-    <rosparam="out" value="/imu/filtered"/>
-    <rosparam="frame_id" value="imu_link"/>
+  <node name="imu_offset_filter_node" pkg="imu_offset_filter" type="imu_offset_filter_node.py" output="screen">
+    <rosparam param="N">1000</rosparam>
+    <rosparam param="in">"/imu"</rosparam>
+    <rosparam param="out">"/imu/filtered"</rosparam>
+    <rosparam param="frame_id">"imu_link"</rosparam>
   </node>
 </launch>
